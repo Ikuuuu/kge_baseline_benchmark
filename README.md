@@ -1,7 +1,7 @@
 # kge_baseline_benchmark — 국방 법령 KG 위 KGE 베이스라인 7종 비교
 
 > 졸업논문 **Part 2 · 방법론 — 베이스라인 선정 근거**
-> 지난 학기 [thesis_transo](https://github.com/lkuuuu/thesis_transo)에서 TransO 논문을 FB15K로 재현했다면, 이번에는 **직접 구축한 한국어 국방 법령 KG**에서 대표 KGE 모델 7종을 같은 조건으로 학습·평가해 본 연구의 비교 기준을 세웁니다.
+> 지난 학기 [thesis_transo](https://github.com/Ikuuuu/thesis_transo)에서 TransO 논문을 FB15K로 재현했다면, 이번에는 **직접 구축한 한국어 국방 법령 KG**에서 대표 KGE 모델 7종을 같은 조건으로 학습·평가해 본 연구의 비교 기준을 세웁니다.
 
 ## 1. 비교 모델
 
@@ -93,7 +93,7 @@ python scripts/report.py --run results/smoke
 3. **TransO는 이 데이터에서 TransE보다 낮습니다** (0.244 vs 0.279). 타입 응집 제약이 엔티티 2,352개 중 1,936개가 `Article` 한 클래스에 몰린 소규모 KG에서는 과하게 작동해, 같은 법령 조문들을 구분하기 어렵게 만든 것으로 보입니다.
 4. **인용·외부인용은 모든 모델에서 MRR 0.06 이하**로 가장 어려운 관계입니다. 인용 대상이 수백 개 법령에 흩어진 롱테일 구조이기 때문입니다.
 
-→ 그래서 본 연구는 **TransE의 방향성 표현은 유지하면서, 온톨로지에서 나온 방향성·계층·역관계 제약을 손실로 더하는 방식**을 택했습니다 ([ontology_constraint_kge](https://github.com/lkuuuu/ontology_constraint_kge)).
+→ 그래서 본 연구는 **TransE의 방향성 표현은 유지하면서, 온톨로지에서 나온 방향성·계층·역관계 제약을 손실로 더하는 방식**을 택했습니다 ([ontology_constraint_kge](https://github.com/Ikuuuu/ontology_constraint_kge)).
 
 ### 재현성 확인
 
@@ -111,7 +111,7 @@ python scripts/report.py --run results/smoke
 
 ## 6. 관련 저장소
 
-[defense_law_kg_dataset](https://github.com/lkuuuu/defense_law_kg_dataset) · [ontology_constraint_kge](https://github.com/lkuuuu/ontology_constraint_kge) · [thesis_final](https://github.com/lkuuuu/thesis_final)
+[defense_law_kg_dataset](https://github.com/Ikuuuu/defense_law_kg_dataset) · [ontology_constraint_kge](https://github.com/Ikuuuu/ontology_constraint_kge) · [thesis_final](https://github.com/Ikuuuu/thesis_final)
 
 ---
 송재익 · 충북대학교 산업인공지능학과 석사과정 (2025254013)
